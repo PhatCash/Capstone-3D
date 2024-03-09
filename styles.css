@@ -1,0 +1,51 @@
+:root {
+    --main-color-green: #2e3c16;
+    --main-color-white: white; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--main-color-green);
+}
+
+/********** Img **********/ 
+.nav-container {
+    height: 100px;
+    background-color: var(--main-color-white);
+}
+
+.nav-container img {
+    padding: 10px 25px;
+}
+
+/********** Printer queue **********/
+.printer-queue {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--main-color-white);
+    border-radius: 25px;
+}
+
+.printer-queue h2 {
+    margin-top: 0;
+    color: var(--main-color-green);
+}
+
+.printer-queue ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.printer-queue li {
+    background-color: #f0f0f0;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.printer-queue li h3, 
+.printer-queue li p {
+    margin: 5px 0;
+}
