@@ -11,13 +11,53 @@ body {
 }
 
 /********** Img **********/ 
-.nav-container {
+/*.nav-container {
     height: 100px;
     background-color: var(--main-color-white);
 }
 
 .nav-container img {
     padding: 10px 25px;
+}
+*/
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    background-color: var(--main-color-white);
+}
+
+.nav-container img {
+    margin-left: 20px;
+}
+
+nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--main-color-green);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 450;
+}
+
+nav ul li a:hover {
+    background-color: #e4e4e4;
 }
 
 /********** Printer queue **********/
@@ -48,4 +88,42 @@ body {
 .printer-queue li h3, 
 .printer-queue li p {
     margin: 5px 0;
+}
+
+/********** Configure **********/
+.config-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--main-color-white);
+    color: var(--main-color-green);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.config-container h2 {
+    color: var(--main-color-green);
+    font-weight: 450;
+}
+
+.config-container form {
+    display: grid;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.config-container form label, .config-container form select, .config-container form button {
+    padding: 8px;
+    margin: 5px 0;
+}
+
+.config-container form button {
+    background-color: var(--main-color-green);
+    color: var(--main-color-white);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.config-container form button:hover {
+    background-color: #1e2a10;
 }

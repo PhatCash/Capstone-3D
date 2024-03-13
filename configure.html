@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Printer Configurability</title>
+</head>
+<body>
+    <div class="nav-container">
+        <img src="./Images/PSU logo.png" alt="PSU Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Printer Queue</a></li>
+                <li><a href="configure.html">Configure Printer</a></li>
+                <li><a href="status.html">Printer Status</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="config-container">
+        <h2>Settings</h2>
+        <form>
+            <label for="filament-type">Filament Type:</label>
+            <select id="filament-type" name="filament-type">
+                <option value="PLA">PLA</option>
+                <option value="ABS">ABS</option>
+                <option value="PETG">PETG</option>
+                <!-- !! -->
+            </select>
+            <label for="nozzle-size">Nozzle Size:</label>
+            <select id="nozzle-size" name="nozzle-size">
+                <option value="0.4mm">0.4mm</option>
+                <option value="0.6mm">0.6mm</option>
+            </select>
+            <label for="filament-type">Filament Type:</label>
+            <select id="filament-type" name="filament-type">
+                <option value="PLA">PLA</option>
+                <option value="ABS">ABS</option>
+                <option value="PETG">PETG</option>
+            </select>
+            <label for="nozzle-size">Nozzle Size:</label>
+            <select id="nozzle-size" name="nozzle-size">
+                <option value="0.4mm">0.4mm</option>
+                <option value="0.6mm">0.6mm</option>
+            </select>
+            <button type="submit">Apply Configuration</button>
+        </form>
+    </div>
+</body>
+</html>
