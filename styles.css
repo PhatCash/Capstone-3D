@@ -127,3 +127,49 @@ nav ul li a:hover {
 .config-container form button:hover {
     background-color: #1e2a10;
 }
+
+/********** Status **********/
+.status-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--main-color-white);
+    color: var(--main-color-green);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.status-container {
+    font-weight: 450;
+}
+.printer-status {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.printer {
+    flex: 1;
+    min-width: 200px;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.red {
+    background-color: red;
+}
+
+.printer span {
+    display: block;
+    margin: 0 auto;
+}
