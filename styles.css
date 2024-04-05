@@ -1,5 +1,6 @@
 :root {
-    --main-color-green: #2e3c16;
+    /* Variables */
+    --main-color-green: #2e3c16; /*PSU color or PARQE color? */ 
     --main-color-white: white; 
 }
 
@@ -8,6 +9,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: var(--main-color-green);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /********** Img **********/ 
@@ -20,6 +22,8 @@ body {
     padding: 10px 25px;
 }
 */
+
+/********** Universal nav bar **********/
 .nav-container {
     display: flex;
     align-items: center;
@@ -97,12 +101,11 @@ nav ul li a:hover {
     background-color: var(--main-color-white);
     color: var(--main-color-green);
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .config-container h2 {
     color: var(--main-color-green);
-    font-weight: 450;
+    font-weight: 550;
 }
 
 .config-container form {
@@ -111,52 +114,51 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.config-container form label, .config-container form select, .config-container form button {
+.form-items label, 
+.form-items select {
     padding: 8px;
-    margin: 5px 0;
 }
 
-.config-container form button {
+#config-btn {
+    margin-top: 12px;
+    padding: 10px; 
+    border: none; 
+    border-radius: 5px;
     background-color: var(--main-color-green);
     color: var(--main-color-white);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
 }
 
-.config-container form button:hover {
+#config-btn:hover {
     background-color: #1e2a10;
 }
 
 /********** Status **********/
 .status-container {
     margin: 20px;
-    padding: 20px;
+    padding: 25px;
     background-color: var(--main-color-white);
     color: var(--main-color-green);
     border-radius: 10px;
     text-align: center;
 }
 
-.status-container {
-    font-weight: 450;
-}
 .printer-status {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
+    margin: 10px 0;
 }
 
 .printer {
     flex: 1;
-    min-width: 200px;
     border-radius: 5px;
     padding: 20px;
-    color: white;
+    color: var(--main-color-white);
     font-weight: bold;
 }
 
+/* Refine as we progress */ 
 .green {
     background-color: green;
 }
@@ -173,3 +175,40 @@ nav ul li a:hover {
     display: block;
     margin: 0 auto;
 }
+
+.jobs-container {
+    margin: 10% 20px 0 20px;
+    padding: 20px 20px 50px 20px;
+    background-color: var(--main-color-white);
+    border-radius: 10px;
+    color: var(--main-color-green);
+}
+
+.jobs-container h2 {
+    color: var(--main-color-green);
+    font-weight: 550;
+    margin-bottom: 15px; 
+    text-align: center;
+}
+
+.jobs-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.jobs-container th,
+.jobs-container td {
+    border: 1px solid #ddd; /* Light grey border for table cells */
+    padding: 8px;
+    text-align: left;
+}
+
+.jobs-container th {
+    background-color: var(--main-color-green);
+    color: var(--main-color-white);
+}
+
+.issue {
+    color: red;
+}
+

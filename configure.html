@@ -11,7 +11,7 @@
         <img src="./Images/PSU logo.png" alt="PSU Logo">
         <nav>
             <ul>
-                <li><a href="index.html">Printer Queue</a></li>
+                <li><a href="queue.html">Printer Queue</a></li>
                 <li><a href="configure.html">Configure Printer</a></li>
                 <li><a href="status.html">Printer Status</a></li>
             </ul>
@@ -19,13 +19,13 @@
     </div>
     <div class="config-container">
         <h2>Settings</h2>
-        <form>
+        <form class="form-items">
             <label for="filament-type">Filament Type:</label>
             <select id="filament-type" name="filament-type">
                 <option value="PLA">PLA</option>
                 <option value="ABS">ABS</option>
                 <option value="PETG">PETG</option>
-                <!-- !! -->
+                <!-- !Just add the same! -->
             </select>
             <label for="nozzle-size">Nozzle Size:</label>
             <select id="nozzle-size" name="nozzle-size">
@@ -43,7 +43,7 @@
                 <option value="0.4mm">0.4mm</option>
                 <option value="0.6mm">0.6mm</option>
             </select>
-            <button type="submit">Apply Configuration</button>
+            <button id="config-btn" type="submit">Apply Configuration</button>
         </form>
     </div>
 </body>
