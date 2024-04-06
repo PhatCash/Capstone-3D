@@ -64,34 +64,61 @@ nav ul li a:hover {
     background-color: #e4e4e4;
 }
 
-/********** Printer queue **********/
-.printer-queue {
-    margin: 20px;
+/********** Printer Info **********/
+.printer-container {
     padding: 20px;
+    margin: 20px;
     background-color: var(--main-color-white);
     border-radius: 25px;
 }
 
-.printer-queue h2 {
+.printer-container h2 {
     margin-top: 0;
     color: var(--main-color-green);
 }
 
-.printer-queue ul {
+.printer-container ul {
     list-style-type: none;
     padding: 0;
 }
 
-.printer-queue li {
+.printer-container li {
     background-color: #f0f0f0;
     margin: 20px 0;
     padding: 10px;
     border-radius: 15px;
 }
 
-.printer-queue li h3, 
-.printer-queue li p {
+.printer-container li h3, 
+.printer-container li p {
     margin: 5px 0;
+}
+
+.setting-btn {
+    background-color: var(--main-color-green);
+    color: var(--main-color-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+
+}
+
+.add-btn {
+    background-color:  var(--main-color-white);
+    color: var(--main-color-green);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 3%;
+    font-size: 1em;
+    margin-left: 45px;
+}
+
+.add-btn:hover {
+    background-color: var(--main-color-green); 
 }
 
 /********** Configure **********/
