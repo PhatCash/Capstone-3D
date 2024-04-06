@@ -133,6 +133,19 @@ nav ul li a:hover {
 }
 
 /********** Status **********/
+/* Refine as we progress */ 
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.red {
+    background-color: red;
+}
+
 .status-container {
     margin: 20px;
     padding: 25px;
@@ -153,32 +166,20 @@ nav ul li a:hover {
 .printer {
     flex: 1;
     border-radius: 5px;
-    padding: 20px;
+    padding: 45px 0;
     color: var(--main-color-white);
     font-weight: bold;
 }
 
-/* Refine as we progress */ 
-.green {
-    background-color: green;
-}
-
-.orange {
-    background-color: orange;
-}
-
-.red {
-    background-color: red;
-}
-
-.printer span {
-    display: block;
-    margin: 0 auto;
+.make-ready,
+.job-info {
+    text-align: left;
+    margin-left: 10px;
 }
 
 .jobs-container {
     margin: 10% 20px 0 20px;
-    padding: 20px 20px 50px 20px;
+    padding: 20px;
     background-color: var(--main-color-white);
     border-radius: 10px;
     color: var(--main-color-green);
