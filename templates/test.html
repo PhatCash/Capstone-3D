@@ -1,33 +1,53 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="printer-container">
-    <h2>Printer Information</h2>
-    <ul>
-        <li>
-            <h3>Printer #12345</h3>
-            <p>Port: 5000</p>
-            <p>Filament Color: Galaxy Black</p>
-            <p>Nozzle Size: #</p>
-            <p>Nozzle Diameter: #</p>
-            <button class="setting-btn">Change Settings</button>
-        </li>
-        <li>
-            <h3>Printer #67890</h3>
-            <p>Port: 5001</p>
-            <p>Filament Color: Dark Green</p>
-            <p>Nozzle Size: 0.4mm</p>
-            <p>Nozzle Diameter: 1.75mm</p>
-            <button class="setting-btn">Change Settings</button>
-        </li>
-        <li>
-            <h3>Printer #54321</h3>
-            <p>Port: 5002</p>
-            <p>Filament Color: Dark Green</p>
-            <p>Nozzle Size: #</p>
-            <p>Nozzle Diameter: #</p>
-            <button class="setting-btn">Change Settings</button>
-        </li>
-    </ul>
+<div class="status-container">
+    <h2>Print Farm Status</h2>
+    <div class="printer-status">
+        <!-- Note that 'data' is passed in through flask -->
+        {% for job in data['queue'] %}
+        <div class="printer green">
+            <p>Printer {{ job.id }}</p>
+            <!-- I need to add the'note' & figure out how to add the color status-->
+            <p class="job-info">Filament Type: {{ job.type }}</p>
+            <p class="job-info">Nozzle Size: {{ job.size }}mm</p>
+            <p class="job-info">Layer Height: {{ job.layer }}mm</p>
+            <p class="job-info">Infill Density: {{ job.density }}</p>
+            <p class="job-info">Quantity: {{ job.quantity }}</p>
+            <!-- Catch the failed prints if no more filament, needs change, etc.-->
+            {% if job.status == 'error' %}
+            <div class="make-ready">
+                <input type="checkbox" id="printer{{ job.id }}" name="printer{{ job.id }}">
+                <label for="printer{{ job.id }}">Make Ready</label>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
 </div>
-<button class="add-btn">Add Printer</button>
+<div class="jobs-container">
+    <h2>JOBS NEEDING ASSISTANCE</h2>
+    <table>
+        <thead>
+            <tr>
+                <!-- Change later -->
+                <th>Job ID</th>
+                <th>Job Name</th>
+                <th>Printer</th>
+                <th>Issue</th>
+                <th>Date/Time Last Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in data['assistance'] %}
+            <tr>
+                <td>{{ job.id }}</td>
+                <td>{{ job.jobName }}</td>
+                <td>{{ job.printer }}</td>
+                <td class="issue">{{ job.issue }}</td>
+                <td>{{ job.lastUpdated }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}

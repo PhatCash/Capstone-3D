@@ -1,0 +1,49 @@
+{
+    "queue": [
+        {
+            "id": 1,
+            "type": "PLA - Black",
+            "size": 0.4,
+            "layer": 0.2,
+            "density": "20%",
+            "quantity": 2,
+            "status": "ready"
+        },
+        {
+            "id": 2,
+            "type": "PLA - Green",
+            "size": 0.4,
+            "layer": 0.2,
+            "density": "10%",
+            "quantity": 2,
+            "status": "error"
+        },
+        {
+            "id": 1.1,
+            "type": "PLA - Black",
+            "size": 0.4,
+            "layer": 0.2,
+            "density": "20%",
+            "quantity": 2,
+            "status": "ready"
+        },
+        {
+            "id": 2.1,
+            "type": "PLA - Green",
+            "size": 0.4,
+            "layer": 0.2,
+            "density": "10%",
+            "quantity": 2,
+            "status": "error"
+        }
+    ],
+    "assistance": [
+        {
+            "id": 3,
+            "jobName": "Green Moss Frog",
+            "printer": "Printer 2",
+            "issue": "Wrong Diameter Size",
+            "lastUpdated": "04/07/2024 3:00 pm"
+        }
+    ]
+}
