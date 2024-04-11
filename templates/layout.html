@@ -7,7 +7,16 @@
     <title>Capstone Webpages</title>
 </head>
 <body>
-    {% block content %}
-    {% endblock content %}
+    <!-- Try to implement -->
+    <div class="nav-container">
+        <img src="{{ url_for('static', filename='Images/PSU logo.png') }}" alt="PSU Logo">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('printer_status') }}">Printer Status</a></li>
+                <li><a href="{{ url_for('printer_page') }}">Printer Page</a></li>
+            </ul>
+        </nav>
+    </div>
+    {% block content %}{% endblock content %}
 </body>
 </html>

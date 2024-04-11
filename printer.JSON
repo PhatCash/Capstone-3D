@@ -45,5 +45,28 @@
             "issue": "Wrong Diameter Size",
             "lastUpdated": "04/07/2024 3:00 pm"
         }
-    ]
+    ],
+    "printers": [
+        {
+          "id": 12345,
+          "port": 5000,
+          "filamentColor": "Galaxy Black",
+          "nozzleSize": "0.6mm",
+          "nozzleDiameter": "2mm"
+        },
+        {
+          "id": 67890,
+          "port": 5001,
+          "filamentColor": "Dark Green",
+          "nozzleSize": "0.4mm",
+          "nozzleDiameter": "1.75mm"
+        },
+        {
+          "id": 54321,
+          "port": 5002,
+          "filamentColor": "Dark Green",
+          "nozzleSize": "2mm",
+          "nozzleDiameter": "2m#"
+        }
+      ]
 }
