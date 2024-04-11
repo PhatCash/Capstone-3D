@@ -68,5 +68,9 @@
           "nozzleSize": "2mm",
           "nozzleDiameter": "2m#"
         }
-      ]
+      ],
+      "settings": {
+        "filament": ["PLA", "ABS", "PETG"],
+        "nozzleSize": [0.4, 0.6]
+      }
 }

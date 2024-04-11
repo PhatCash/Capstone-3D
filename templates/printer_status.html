@@ -4,7 +4,7 @@
     <h2>Print Farm Status</h2>
     <div class="printer-status">
         <!-- Note that 'data' is passed in through flask -->
-        {% for job in data['queue'] %}
+        {% for job in data.queue %}
         <div class="printer green">
             <p>Printer {{ job.id }}</p>
             <!-- I need to add the'note' & figure out how to add the color status-->
@@ -38,7 +38,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for job in data['assistance'] %}
+            {% for job in data.assistance %}
             <tr>
                 <td>{{ job.id }}</td>
                 <td>{{ job.jobName }}</td>

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="config-container">
+    <h2>Settings</h2>
+    <form class="form-items">
+        <label for="filament-type">Filament Type:</label>
+        <select id="filament-type" name="filament-type">
+            {% for filament in data.settings.filament %}
+            <option value="{{ filament }}">{{ filament }}</option>
+            {% endfor %}
+        </select>
+        <label for="nozzle-size">Nozzle Size:</label>
+        <select id="nozzle-size" name="nozzle-size">
+            {% for size in data.settings.nozzleSize %}
+            <option value="{{ size }}">{{ size }}mm</option>
+            {% endfor %}
+        </select>
+
+        <button id="config-btn" type="submit">Apply Configuration</button>
+    </form>
+</div>
+{% endblock %}

@@ -12,8 +12,9 @@
         <img src="{{ url_for('static', filename='Images/PSU logo.png') }}" alt="PSU Logo">
         <nav>
             <ul>
-                <li><a href="{{ url_for('printer_status') }}">Printer Status</a></li>
-                <li><a href="{{ url_for('printer_page') }}">Printer Page</a></li>
+                <li><a href="{{ url_for('status') }}">Printer Status</a></li>
+                <li><a href="{{ url_for('configure') }}">Configure Printer</a></li>
+                <li><a href="{{ url_for('page') }}">Printer Page</a></li>
             </ul>
         </nav>
     </div>
