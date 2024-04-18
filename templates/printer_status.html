@@ -4,22 +4,27 @@
     <h2>Print Farm Status</h2>
     <div class="printer-status">
         <!-- Note that 'data' is passed in through flask -->
-        {% for job in data.queue %}
+        {% for printer in data.printers %}
         <div class="printer green">
-            <p>Printer {{ job.id }}</p>
+            <p>Printer {{ printer.id }} - port #{{ printer.port }}</p>
+            <p>Job: {{ printer.job }} </p>
             <!-- I need to add the'note' & figure out how to add the color status-->
-            <p class="job-info">Filament Type: {{ job.type }}</p>
-            <p class="job-info">Nozzle Size: {{ job.size }}mm</p>
-            <p class="job-info">Layer Height: {{ job.layer }}mm</p>
-            <p class="job-info">Infill Density: {{ job.density }}</p>
-            <p class="job-info">Quantity: {{ job.quantity }}</p>
+            <p class="info">Filament Type: {{ printer.filamentType }}</p>
+            <p class="info">Nozzle Size: {{ printer.nozzleDiameter }}</p>
+            <p class="info">Filament Color: {{ printer.filamentColor }}</p>
+            <p class="info">Filament Type: {{ printer.filamentType }}</p>
             <!-- Catch the failed prints if no more filament, needs change, etc.-->
-            {% if job.status == 'error' %}
+            {% for job in data.jobs %}
+            {% if printer.job == job.id and job.status == 'Error' %}
             <div class="make-ready">
-                <input type="checkbox" id="printer{{ job.id }}" name="printer{{ job.id }}">
-                <label for="printer{{ job.id }}">Make Ready</label>
+                <input type="checkbox" id="printer{{ printer.id }}" name="printer{{ printer.id }}">
+                <label for="printer{{ printer.id }}">Make Ready</label>
             </div>
             {% endif %}
+            {% endfor %}
+            <button class="add-btn">
+                <a method=get href="{{ url_for('configure') }}?printerid={{printer.id}}">Configure Printer</a>
+            </button>
         </div>
         {% endfor %}
     </div>
@@ -33,7 +38,8 @@
                 <th>Job ID</th>
                 <th>Job Name</th>
                 <th>Printer</th>
-                <th>Issue</th>
+                <th>Status</th>
+                <th>Message</th>
                 <th>Date/Time Last Updated</th>
             </tr>
         </thead>
@@ -43,6 +49,7 @@
                 <td>{{ job.id }}</td>
                 <td>{{ job.jobName }}</td>
                 <td>{{ job.printer }}</td>
+                <td>{{ job.status }}</td>
                 <td class="issue">{{ job.issue }}</td>
                 <td>{{ job.lastUpdated }}</td>
             </tr>

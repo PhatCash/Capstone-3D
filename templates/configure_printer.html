@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="config-container">
-    <h2>Settings</h2>
+    <h2>Settings for {{ request.args.get('printerid') }}</h2>
     <form class="form-items">
         <label for="filament-type">Filament Type:</label>
         <select id="filament-type" name="filament-type">

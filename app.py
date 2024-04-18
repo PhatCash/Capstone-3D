@@ -1,7 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 import json
 
 app = Flask(__name__)
+
+@app.route("/")
+def home():
+    #return "hell no, flask!"
+    return redirect('/printer_status')
 
 # Try to render one first - comment out nav bar
 #@app.route('/')

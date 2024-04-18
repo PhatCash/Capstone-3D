@@ -6,40 +6,40 @@
             "size": 0.4,
             "layer": 0.2,
             "density": "20%",
-            "quantity": 2,
-            "status": "ready"
+            "quantity": 1,
+            "status": "Ready"
         },
         {
             "id": 2,
             "type": "PLA - Green",
-            "size": 0.4,
+            "size": 0.6,
             "layer": 0.2,
             "density": "10%",
-            "quantity": 2,
-            "status": "error"
+            "quantity": 1,
+            "status": "Error"
         },
         {
-            "id": 1.1,
+            "id": 3.1,
             "type": "PLA - Black",
             "size": 0.4,
             "layer": 0.2,
             "density": "20%",
             "quantity": 2,
-            "status": "ready"
+            "status": "Ready"
         },
         {
-            "id": 2.1,
-            "type": "PLA - Green",
+            "id": 3.2,
+            "type": "PLA - Black",
             "size": 0.4,
             "layer": 0.2,
             "density": "10%",
             "quantity": 2,
-            "status": "error"
+            "status": "Error"
         }
     ],
     "assistance": [
         {
-            "id": 3,
+            "id": 4,
             "jobName": "Green Moss Frog",
             "printer": "Printer 2",
             "issue": "Wrong Diameter Size",
@@ -48,25 +48,28 @@
     ],
     "printers": [
         {
-          "id": 12345,
+          "id": "A1",
           "port": 5000,
           "filamentColor": "Galaxy Black",
-          "nozzleSize": "0.6mm",
-          "nozzleDiameter": "2mm"
+          "filamentType": "PLA",
+          "nozzleDiameter": "0.2 mm",
+          "job": ""
         },
         {
-          "id": 67890,
+          "id": "A2",
           "port": 5001,
           "filamentColor": "Dark Green",
-          "nozzleSize": "0.4mm",
-          "nozzleDiameter": "1.75mm"
+          "filamentType": "PLA",
+          "nozzleDiameter": "0.2 mm",
+          "job": ""
         },
         {
-          "id": 54321,
+          "id": "B1",
           "port": 5002,
-          "filamentColor": "Dark Green",
-          "nozzleSize": "2mm",
-          "nozzleDiameter": "2m#"
+          "filamentColor": "Galaxy Black",
+          "filamentType": "PLA",
+          "nozzleDiameter": "0.6 mm",
+          "job": ""
         }
       ],
       "settings": {
