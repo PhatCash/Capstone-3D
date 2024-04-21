@@ -47,12 +47,8 @@
             </tr>
         </thead>
         <tbody>
-            {% for job in data.assistance %}
-             for job data.queue
-             if status != 'Complete' 
-
-
-
+            {% for job in data.queue %}
+            {% if job.status == "Error" %}
             <tr>
                 <td>{{ job.id }}</td>
                 <td>{{ job.jobName }}</td>
@@ -61,6 +57,7 @@
                 <td class="issue">{{ job.issue }}</td>
                 <td>{{ job.lastUpdated }}</td>
             </tr>
+            {% endif %}
             {% endfor %}
         </tbody>
     </table>
