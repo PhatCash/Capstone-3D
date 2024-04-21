@@ -64,7 +64,7 @@ nav ul li a:hover {
     background-color: #e4e4e4;
 }
 
-/********** Printer Info **********/
+/********** Printer **********/
 .printer-container {
     padding: 20px;
     margin: 20px;
@@ -118,7 +118,8 @@ nav ul li a:hover {
 }
 
 .add-btn:hover {
-    background-color: var(--main-color-green); 
+    background-color: #00c04b;
+    color: var(--main-color-white);
 }
 
 /********** Configure **********/
@@ -199,7 +200,9 @@ nav ul li a:hover {
 }
 
 .make-ready,
-.job-info {
+.job-info, 
+.printer-info,
+.info {
     text-align: left;
     margin-left: 10px;
 }
