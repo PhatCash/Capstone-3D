@@ -53,7 +53,7 @@
           "filamentColor": "Galaxy Black",
           "filamentType": "PLA",
           "nozzleDiameter": "0.2 mm",
-          "job": ""
+          "jobStatus": "Ready"
         },
         {
           "id": "A2",
@@ -61,7 +61,7 @@
           "filamentColor": "Dark Green",
           "filamentType": "PLA",
           "nozzleDiameter": "0.2 mm",
-          "job": ""
+          "jobStatus": "Error"
         },
         {
           "id": "B1",
@@ -69,11 +69,16 @@
           "filamentColor": "Galaxy Black",
           "filamentType": "PLA",
           "nozzleDiameter": "0.6 mm",
-          "job": ""
+          "jobStatus": ""
         }
       ],
+      
       "settings": {
         "filament": ["PLA", "ABS", "PETG"],
         "nozzleSize": [0.4, 0.6]
+      },
+
+      "filaments": {
+
       }
 }

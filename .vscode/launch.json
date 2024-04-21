@@ -14,9 +14,9 @@
                 "FLASK_DEBUG": "1"
             },
             "args": [
+                "run",
                 "--debug", // used for live updating vice  "--no-debugger"
-                "--reload", // vice "no-reload"
-                "run"
+                "--reload" // vice "no-reload"
             ],
             "jinja": true,
             "autoStartBrowser": false

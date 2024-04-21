@@ -3,13 +3,11 @@ import json
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def home():
-    #return "hell no, flask!"
     return redirect('/printer_status')
 
 # Try to render one first - comment out nav bar
-#@app.route('/')
 @app.route('/printer_status')
 def status():
     # with closes the file
@@ -27,6 +25,11 @@ def page():
 def configure():
     with open('./printer.JSON') as json_file:
         return render_template("configure_printer.html", data=json.load(json_file))
+    
+@app.route('/add_printer')
+def add():
+    with open('./printer.JSON') as json_file:
+        return render_template("add_printer.html", data=json.load(json_file))
 
 if __name__ == '__main__':
     app.run()
