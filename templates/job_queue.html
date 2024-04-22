@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="job-queue-container">
+    <h2>Job Queue Log</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Job ID</th>
+                <th>Order ID</th>
+                <th>Job Name</th>
+                <th>Job Status</th>
+                <th>Status Message</th>
+                <th>Assigned Printer</th>
+                <th>Nozzle Size</th>
+                <th>Filament</th>
+                <th>Last Updated</th>
+                <th>Received</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in data.jobs %}
+            <tr>
+                <td>{{ job.job_ID }}</td>
+                <td>{{ job.order_ID }}</td>
+                <td>{{ job.job_name }}</td>
+                <td data-status="{{ job.job_status }}">{{ job.job_status }}</td>
+                <td>{{ job.status_message }}</td>
+                <td>{{ job.printer_assignment }}</td>
+                <td>{{ job.nozzle_size_needed }}</td>
+                <td>{{ job.filament }}</td>
+                <td>{{ job.last_updated }}</td>
+                <td>{{ job.received }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

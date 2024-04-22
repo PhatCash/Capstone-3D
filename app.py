@@ -15,7 +15,6 @@ def status():
         return render_template("printer_status.html", data=json.load(json_file)) # Send JSON data
     
 # Implement the other two webpages - need same JSON
-# Will change soon
 @app.route('/printer_page')
 def page():
     with open('./printer.JSON') as json_file: 
@@ -25,7 +24,12 @@ def page():
 def configure():
     with open('./printer.JSON') as json_file:
         return render_template("configure_printer.html", data=json.load(json_file))
-    
+
+@app.route('/job_queue')
+def queue():
+    with open('./printer.JSON') as json_file:
+        return render_template("job_queue.html", data=json.load(json_file))
+
 @app.route('/add_printer')
 def add():
     with open('./printer.JSON') as json_file:
