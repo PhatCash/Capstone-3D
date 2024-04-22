@@ -11,14 +11,14 @@
             <p>Filament Color: {{ printer.filamentColor }}</p>
             <p>Nozzle Size: {{ printer.nozzleSize }}</p>
             <p>Nozzle Diameter: {{ printer.nozzleDiameter }}</p>
-            <button class="add-btn">
-                <a method=get href="{{ url_for('configure') }}?printerid={{ printer.id }}">Printer Settings</a>
+            <button class="set-btn">
+                <a method="get" href="{{ url_for('configure') }}?printerid={{ printer.id }}">Printer Settings</a>
             </button>
         </li>
         {% endfor %}
     </ul>
 </div>
 <button class="add-btn">
-    <a method=get href="{{ url_for('add') }}">+ Add Printer</a>
+    <a method="get" href="{{ url_for('add') }}">+ Add Printer</a>
 </button>
 {% endblock %}
