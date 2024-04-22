@@ -5,7 +5,10 @@
     <form class="form-items" method="post" action="addPrinter.php">
 
         <label for="printer-id">Printer ID:</label>
-        <!-- WAY TO ENTER PRINTER ID HERE -->
+        <input id="printer-id" type="text"><br>
+
+        <label for="printer-port">Printer Port:</label>
+        <input id="printer-port" type="number"><br>
 
         <label for="filament-type">Filament Type:</label>
         <select id="filament-type" name="filament-type">
@@ -21,11 +24,16 @@
             {% endfor %}
         </select>
 
-        <button id="config-btn" type="submit" value="submit" onlcick="updateJSON()">Apply Configuration</button>
+        <button id="config-btn" type="submit" value="submit" onlcick="updateJSON()">Add Printer</button>
         
         <script>
             function updateJSON() {
-                
+                var printerID = document.getElementById("printer-id")
+                var printerPort = document.getElementById("printer-port")
+                var filamentType = document.getElementById("printer-type")
+                var nozzleSize = document.getElementById("nozzle-size")
+
+                updateJSON.py(printerID, printerPort,filamentType, nozzleSize)
             }
         </script>
         
