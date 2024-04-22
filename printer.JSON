@@ -1,111 +1,111 @@
 {
-    "queue": [
-        {
-            "id": 1,
-            "jobName": "no name",
-            "type": "PLA - Black",
-            "size": 0.6,
-            "layer": 0.2,
-            "density": "20%",
-            "quantity": 1,
-            "status": "pending",
-            "issue": "",
-            "lastUpdated": "04/07/2024 3:00 pm"
-        },
-        {
-            "id": 2,
-            "jobName": "vent spacer",
-            "type": "PLA - Green",
-            "size": 0.5,
-            "layer": 0.2,
-            "density": "10%",
-            "quantity": 1,
-            "printer": "",
-            "status": "Error",
-            "issue": "No Matching Nozzle Dia.",
-            "lastUpdated": "04/07/2024 2:00 pm"
-        },
-        {
-            "id": 3.1,
-            "jobName": "Black Dog",
-            "type": "PLA - Black",
-            "size": 0.4,
-            "layer": 0.2,
-            "density": "20%",
-            "quantity": 2,
-            "printer": "A1",
-            "status": "Printing",
-            "issue": "",
-            "lastUpdated": "04/07/2024 2:00 pm"
-        },
-        {
-            "id": 3.2,
-            "type": "PLA - Black",
-            "jobName": "Black Dog",
-            "size": 0.4,
-            "layer": 0.2,
-            "density": "10%",
-            "quantity": 2,
-            "printer": "",
-            "status": "pending",
-            "issue": "",
-            "lastUpdated": "04/07/2024 3:00 pm"
-        },
-        {
-            "id": 4,
-            "jobName": "Green Moss Frog",
-            "type": "PLA - Dark Green",
-            "size": 0.6,
-            "layer": 0.2,
-            "density": "10%",
-            "quantity": 2,
-            "printer": "none",
-            "status": "Error",
-            "issue": "No matching filament",
-            "lastUpdated": "04/07/2024 3:00 pm"
-        }
-    ],
-    "printers": [
-        {
-          "id": "A1",
-          "port": 6000,
-          "filamentColor": "Galaxy Black",
-          "filamentType": "PLA",
-          "nozzleDiameter": "0.4 mm",
-          "jobStatus": "Printing"
-        },
-        {
-          "id": "A2",
-          "port": 6001,
-          "filamentColor": "Dark Green",
-          "filamentType": "PLA",
-          "nozzleDiameter": "0.4 mm",
-          "jobStatus": "Error"
-        },
-        {
-          "id": "B1",
-          "port": 6501,
-          "filamentColor": "Galaxy Black",
-          "filamentType": "PLA",
-          "nozzleDiameter": "0.6 mm",
-          "jobStatus": "Printing"
-        },
-        {
-          "id": "B2",
-          "port": 6503,
-          "filamentColor": "Galaxy Black",
-          "filamentType": "PLA",
-          "nozzleDiameter": "0.6 mm",
-          "jobStatus": "Ready"
-        }
-      ],
-
-      "settings": {
-        "filament": ["PLA", "ABS", "PETG"],
-        "nozzleSize": [0.4, 0.6]
+  "queue": [
+    {
+        "id": 1,
+        "jobName": "no name",
+        "type": "PLA - Black",
+        "size": 0.6,
+        "layer": 0.2,
+        "density": "20%",
+        "quantity": 1,
+        "status": "pending",
+        "issue": "",
+        "lastUpdated": "04/07/2024 3:00 pm"
+    },
+    {
+        "id": 2,
+        "jobName": "vent spacer",
+        "type": "PLA - Green",
+        "size": 0.5,
+        "layer": 0.2,
+        "density": "10%",
+        "quantity": 1,
+        "printer": "",
+        "status": "Error",
+        "issue": "No Matching Nozzle Dia.",
+        "lastUpdated": "04/07/2024 2:00 pm"
+    },
+    {
+        "id": 3.1,
+        "jobName": "Black Dog",
+        "type": "PLA - Black",
+        "size": 0.4,
+        "layer": 0.2,
+        "density": "20%",
+        "quantity": 2,
+        "printer": "A1",
+        "status": "Printing",
+        "issue": "",
+        "lastUpdated": "04/07/2024 2:00 pm"
+    },
+    {
+        "id": 3.2,
+        "type": "PLA - Black",
+        "jobName": "Black Dog",
+        "size": 0.4,
+        "layer": 0.2,
+        "density": "10%",
+        "quantity": 2,
+        "printer": "",
+        "status": "pending",
+        "issue": "",
+        "lastUpdated": "04/07/2024 3:00 pm"
+    },
+    {
+        "id": 4,
+        "jobName": "Green Moss Frog",
+        "type": "PLA - Dark Green",
+        "size": 0.6,
+        "layer": 0.2,
+        "density": "10%",
+        "quantity": 2,
+        "printer": "none",
+        "status": "Error",
+        "issue": "No matching filament",
+        "lastUpdated": "04/07/2024 3:00 pm"
+    }
+  ],
+  "printers": [
+      {
+        "id": "A1",
+        "port": 6000,
+        "filamentColor": "Galaxy Black",
+        "filamentType": "PLA",
+        "nozzleDiameter": "0.4 mm",
+        "jobStatus": "Printing"
       },
-
-      "filaments": {
-
+      {
+        "id": "A2",
+        "port": 6001,
+        "filamentColor": "Dark Green",
+        "filamentType": "PLA",
+        "nozzleDiameter": "0.4 mm",
+        "jobStatus": "Error"
+      },
+      {
+        "id": "B1",
+        "port": 6501,
+        "filamentColor": "Galaxy Black",
+        "filamentType": "PLA",
+        "nozzleDiameter": "0.6 mm",
+        "jobStatus": "Printing"
+      },
+      {
+        "id": "B2",
+        "port": 6503,
+        "filamentColor": "Galaxy Black",
+        "filamentType": "PLA",
+        "nozzleDiameter": "0.6 mm",
+        "jobStatus": "Ready"
       }
+    ],
+
+    "settings": {
+      "filament": ["PLA", "ABS", "PETG"],
+      "nozzleSize": [0.4, 0.6]
+    },
+
+    "filaments": {
+
+    }
 }
