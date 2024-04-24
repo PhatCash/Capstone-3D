@@ -1,0 +1,88 @@
+{
+  "jobs": [
+    {
+        "job_ID": 5,
+        "order_ID": 321,
+        "job_name": "Horse",
+        "job_status": "RHI",
+        "status_message": "RHI",
+        "printer_assignment": "A1",
+        "nozzle_size_needed": 0.4,
+        "filament": "PLA",
+        "last_updated": "04/07/2024 5:00 pm",
+        "received": "04/07/2024 3:00 pm"
+    },
+    {
+        "job_ID": 6,
+        "order_ID": 324,
+        "job_name": "Elden Ring",
+        "job_status": "Pending",
+        "status_message": "N/A",
+        "printer_assignment": "A2",
+        "nozzle_size_needed": 0.6,
+        "filament": "PLA",
+        "last_updated": "04/07/2024 2:00 pm",
+        "received": "04/07/2024 1:00 pm"
+    },
+    {
+        "job_ID": 7,
+        "order_ID": 123,
+        "job_name": "Chain Mail",
+        "job_status": "Error",
+        "status_message": "Filament Color Unavailable",
+        "printer_assignment": "B2",
+        "nozzle_size_needed": 0.4,
+        "filament": "PETG",
+        "last_updated": "04/07/2024 6:30 pm",
+        "received": "04/07/2024 6:00 pm"
+    },
+    {
+        "job_ID": 8,
+        "order_ID": 457,
+        "job_name": "Ben's Plate",
+        "job_status": "Pending",
+        "status_message": "N/A",
+        "printer_assignment": "B1",
+        "nozzle_size_needed": 0.4,
+        "filament": "PETG",
+        "last_updated": "04/07/2024 10:00 pm",
+        "received": "04/07/2024 5:00 pm"
+    },
+    {
+        "job_ID": 9,
+        "order_ID": 234,
+        "job_name": "Ed's Hat",
+        "job_status": "Pending",
+        "status_message": "N/A",
+        "printer_assignment": "A2",
+        "nozzle_size_needed": 0.6,
+        "filament": "PLA",
+        "last_updated": "04/07/2024 1:00 pm",
+        "received": "04/07/2024 3:00 pm"
+    },
+    {
+        "job_ID": 10,
+        "order_ID": 321,
+        "job_name": "Green Moss Frog",
+        "job_status": "RHI",
+        "status_message": "RHI",
+        "printer_assignment": "B2",
+        "nozzle_size_needed": 0.4,
+        "filament": "ABS",
+        "last_updated": "04/07/2024 1:30 pm",
+        "received": "04/07/2024 1:00 pm"
+    },
+    {
+        "job_ID": 11,
+        "order_ID": 423,
+        "job_name": "PARQE",
+        "job_status": "Error",
+        "status_message": "Filament Runout",
+        "printer_assignment": "A2",
+        "nozzle_size_needed": 0.4,
+        "filament": "PLA",
+        "last_updated": "04/07/2024 5:00 pm",
+        "received": "04/07/2024 3:00 pm"
+    }
+  ]
+}

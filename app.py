@@ -1,5 +1,6 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, request, render_template, redirect
 import json
+from update.updateJSON import add_printer
 
 app = Flask(__name__)
 
@@ -11,28 +12,35 @@ def home():
 @app.route('/printer_status')
 def status():
     # with closes the file
-    with open('./printer.JSON') as json_file:
+    with open('./data.JSON') as json_file:
         return render_template("printer_status.html", data=json.load(json_file)) # Send JSON data
     
 # Implement the other two webpages - need same JSON
-@app.route('/printer_page')
+@app.route('/printer_page', methods=["GET","POST"])
 def page():
-    with open('./printer.JSON') as json_file: 
+    if request.method == "POST":
+        printerID = request.form.get("printer-id")
+        printerPort = request.form.get("printer-port")
+        filamentType = request.form.get("filament-type")
+        nozzleSize = request.form.get("nozzle-size")
+        add_printer(printerID, printerPort, filamentType, nozzleSize)
+
+    with open('./printers.JSON') as json_file: 
         return render_template("printer_page.html", data=json.load(json_file))
 
 @app.route('/configure_printer')
 def configure():
-    with open('./printer.JSON') as json_file:
+    with open('./data.JSON') as json_file:
         return render_template("configure_printer.html", data=json.load(json_file))
 
 @app.route('/job_queue')
 def queue():
-    with open('./printer.JSON') as json_file:
+    with open('./data.JSON') as json_file:
         return render_template("job_queue.html", data=json.load(json_file))
 
-@app.route('/add_printer')
+@app.route('/add_printer', methods=["GET","POST"])
 def add():
-    with open('./printer.JSON') as json_file:
+    with open('./data.JSON') as json_file:
         return render_template("add_printer.html", data=json.load(json_file))
 
 if __name__ == '__main__':

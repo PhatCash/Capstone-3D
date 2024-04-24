@@ -1,0 +1,44 @@
+{
+    "printers": [
+        {
+            "id": "A1",
+            "port": 6000,
+            "filamentColor": "Galaxy Black",
+            "filamentType": "PLA",
+            "nozzleDiameter": "0.4 mm",
+            "jobStatus": "Printing"
+        },
+        {
+            "id": "A2",
+            "port": 6001,
+            "filamentColor": "Dark Green",
+            "filamentType": "PLA",
+            "nozzleDiameter": "0.4 mm",
+            "jobStatus": "Error"
+        },
+        {
+            "id": "B1",
+            "port": 6501,
+            "filamentColor": "Galaxy Black",
+            "filamentType": "PLA",
+            "nozzleDiameter": "0.6 mm",
+            "jobStatus": "Printing"
+        },
+        {
+            "id": "B2",
+            "port": 6503,
+            "filamentColor": "Galaxy Black",
+            "filamentType": "PLA",
+            "nozzleDiameter": "0.6 mm",
+            "jobStatus": "Ready"
+        },
+        {
+            "id": "A4",
+            "port": "6003",
+            "filamentColor": "na",
+            "filamentTpe": "PLA",
+            "nozzleDiameter": "0.4",
+            "jobStatus": "Ready"
+        }
+    ]
+}

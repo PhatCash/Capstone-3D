@@ -1,0 +1,19 @@
+{
+  "filaments": [
+    {
+        "id": "1",
+        "color": "Galazy Black",
+        "type": "PLA"
+    },
+    {
+        "id": "2",
+        "color": "Dark Green",
+        "type": "PLA"
+    },
+    {
+        "id": "3",
+        "color": "Light Green",
+        "type": "PLA"
+    }
+  ]
+}
