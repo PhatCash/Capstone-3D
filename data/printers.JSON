@@ -39,6 +39,14 @@
             "filamentTpe": "PLA",
             "nozzleDiameter": "0.4",
             "jobStatus": "Ready"
+        },
+        {
+            "id": "B3",
+            "port": "6503",
+            "filamentColor": "na",
+            "filamentTpe": "ABS",
+            "nozzleDiameter": "0.6",
+            "jobStatus": "Ready"
         }
     ]
 }

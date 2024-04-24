@@ -9,7 +9,7 @@
             <h3>Printer #{{ printer.id }}</h3>
             <p>Port: {{ printer.port }}</p>
             <p>Filament Color: {{ printer.filamentColor }}</p>
-            <p>Nozzle Size: {{ printer.nozzleSize }}</p>
+            <p>Nozzle Size: {{ printer.nozzleDiameter }}</p>
             <p>Nozzle Diameter: {{ printer.nozzleDiameter }}</p>
             <button class="set-btn">
                 <a method="get" href="{{ url_for('configure') }}?printerid={{ printer.id }}">Printer Settings</a>
