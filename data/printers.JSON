@@ -17,34 +17,26 @@
             "jobStatus": "Error"
         },
         {
-            "id": "B1",
-            "port": 6501,
+            "id": "A3",
+            "port": 6002,
             "filamentColor": "Galaxy Black",
             "filamentType": "PLA",
-            "nozzleDiameter": "0.6 mm",
-            "jobStatus": "Printing"
+            "nozzleDiameter": "0.4 mm",
+            "jobStatus": "Pick Up"
         },
         {
             "id": "B2",
-            "port": 6503,
+            "port": 6500,
             "filamentColor": "Galaxy Black",
             "filamentType": "PLA",
             "nozzleDiameter": "0.6 mm",
-            "jobStatus": "Ready"
-        },
-        {
-            "id": "A4",
-            "port": "6003",
-            "filamentColor": "na",
-            "filamentTpe": "PLA",
-            "nozzleDiameter": "0.4",
             "jobStatus": "Ready"
         },
         {
             "id": "B3",
-            "port": "6503",
+            "port": "6502",
             "filamentColor": "na",
-            "filamentTpe": "ABS",
+            "filamentTpe": "PLA",
             "nozzleDiameter": "0.6",
             "jobStatus": "Ready"
         }
