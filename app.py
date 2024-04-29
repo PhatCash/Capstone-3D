@@ -12,8 +12,8 @@ def home():
 @app.route('/printer_status')
 def status():
     # with closes the file
-    with open('./data/data.json') as json_file:
-        return render_template("printer_status.html", data=json.load(json_file)) # Send json data
+    with open('./data/data.json') as json_file, open('./data/printers.json') as printer_file:
+        return render_template("printer_status.html", data=json.load(json_file), printers=json.load(printer_file)) # Send json data
     
 # Implement the other two webpages - need same json
 @app.route('/printer_page', methods=["GET","POST"])

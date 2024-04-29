@@ -4,35 +4,33 @@
     <h2>Print Farm Status</h2>
     <div class="printer-status">
         <!-- Note that 'data' is passed in through flask -->
-        {% for printer in data.printers %}
-        {% if printer.jobStatus == 'Ready' %}
+        {% for printer in printers.printers %}
+        {% if printer.status == 'Ready' %}
             <div class="printer green">
-        {% elif printer.jobStatus == 'Off Line' %}
+        {% elif printer.status == 'Off Line' %}
             <div class="printer grey">
-        {% elif printer.jobStatus == 'RHI' %}
+        {% elif printer.status == 'Pick Up' %}
             <div class="printer orange">
-        {% elif printer.jobStatus == 'Error' %}
+        {% elif printer.status == 'Error' %}
             <div class="printer red">
         {% else %}
             <div class="printer green">
         {%  endif %}
             <p>Printer {{ printer.id }} - port #{{ printer.port }}</p>
-            <p>Status: {{ printer.jobStatus}} </p>
+            <p>Status: {{ printer.status}} </p>
             <!-- I need to add the'note' -->
             <p class="info">Job: {{ printer.job }} </p>
             <p class="info">Nozzle Size: {{ printer.nozzleDiameter }}</p>
             <p class="info">Filament Color: {{ printer.filamentColor }}</p>
             <p class="info">Filament Type: {{ printer.filamentType }}</p>
             <!-- Catch the failed prints if no more filament, needs change, etc.-->
-            {% for job in data.queue %} <!-- TODO Figure out why this isn't populating-->
-            {% if printer.job == job.id and job.status == 'Pick Up' %}
+        {% if printer.status == 'Pick Up' %}
             <div class="make-ready">
-                <input type="checkbox" id="printer{{ printer.id }}" name="printer{{ printer.id }}">
-                <label for="printer{{ printer.id }}">Make Ready</label>
+            <input type="checkbox" id="printer{{ printer.id }}" name="printer{{ printer.id }}">
+            <label for="printer{{ printer.id }}">Make Ready</label>
             </div>
-            {% endif %}
-            {% endfor %}
-        </div>
+        {% endif %}
+            </div>
         {% endfor %}
     </div>
 </div>
