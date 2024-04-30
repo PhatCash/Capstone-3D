@@ -25,8 +25,11 @@ def page():
         nozzleSize = request.form.get("nozzle-size")
         add_printer(printerID, printerPort, filamentType, nozzleSize)
 
-    with open('./data/printers.json') as json_file: 
-        return render_template("printer_page.html", data=json.load(json_file))
+    # Distinguish between the printers.JSON and filaments.JSON
+    with open('./data/printers.json') as printer_file, open('./data/filaments.json') as filament_file:
+        printers = json.load(printer_file)
+        filaments = json.load(filament_file)
+        return render_template("printer_page.html", data_printers=printers, data_filaments=filaments)
 
 @app.route('/configure_printer')
 def configure():

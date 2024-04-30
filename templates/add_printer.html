@@ -1,31 +1,29 @@
-{% extends "layout.html" %}
-{% block content %}
+{% extends "layout.html" %} {% block content %}
 <div class="config-container">
-    <h2>Add Printer</h2>
-    <form class="form-items" method="POST" action='/printer_page'>
+  <h2>Add Printer</h2>
+  <!-- We may have to implement a fieldset here for structure -->
+  <form class="form-items" method="POST" action="/printer_page">
+    <label for="printer-id">Printer ID:</label>
+    <input id="printer-id" name="printer-id" type="text" /><br />
 
-        <label for="printer-id">Printer ID:</label>
-        <input id="printer-id" name="printer-id" type="text"><br>
+    <label for="printer-port">Printer Port:</label>
+    <input id="printer-port" name="printer-port" type="number" /><br />
 
-        <label for="printer-port">Printer Port:</label>
-        <input id="printer-port" name="printer-port" type="number"><br>
+    <label for="filament-type">Filament Type:</label>
+    <select id="filament-type" name="filament-type">
+      {% for filament in data.settings.filament %}
+      <option value="{{ filament }}">{{ filament }}</option>
+      {% endfor %}
+    </select>
 
-        <label for="filament-type">Filament Type:</label>
-        <select id="filament-type" name="filament-type">
-            {% for filament in data.settings.filament %}
-            <option value="{{ filament }}">{{ filament }}</option>
-            {% endfor %}
-        </select>
-        
-        <label for="nozzle-size">Nozzle Size:</label>
-        <select id="nozzle-size" name="nozzle-size">
-            {% for size in data.settings.nozzleSize %}
-            <option value="{{ size }}">{{ size }} mm</option>
-            {% endfor %}
-        </select>
+    <label for="nozzle-size">Nozzle Size:</label>
+    <select id="nozzle-size" name="nozzle-size">
+      {% for size in data.settings.nozzleSize %}
+      <option value="{{ size }}">{{ size }} mm</option>
+      {% endfor %}
+    </select>
 
-        <button id="config-btn" type="submit" value="submit">Add Printer</button>
-        
-    </form>
+    <button id="config-btn" type="submit" value="submit">Add Printer</button>
+  </form>
 </div>
 {% endblock %}
