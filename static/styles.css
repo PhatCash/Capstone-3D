@@ -1,298 +1,310 @@
 :root {
-    /* Variables */
-    --main-color-green: #2e3c16; /*PSU color or PARQE color? */ 
-    --main-color-white: white; 
-    --main-color-light-green: #4CAF50;
+  /* Variables */
+  --main-color-green: #2e3c16; /*PSU color or PARQE color? */
+  --main-color-white: white;
+  --main-color-light-green: #4caf50;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: var(--main-color-green);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--main-color-green);
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /********** Universal nav bar **********/
 .nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    padding: 10px;
-    background-color: var(--main-color-white);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  background-color: var(--main-color-white);
 }
 
 .nav-container img {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 nav {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 nav ul {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: var(--main-color-green);
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 25px;
-    font-weight: 450;
+  text-decoration: none;
+  color: var(--main-color-green);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 450;
 }
 
 nav ul li a:hover {
-    background-color: #e4e4e4;
+  background-color: #e4e4e4;
 }
 
 /********** Printer Page **********/
-.printer-container {
-    padding: 20px;
-    margin: 20px;
-    background-color: var(--main-color-white);
-    border-radius: 10px;
+.printer-filament-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+  padding: 0.5em;
+  background-color: var(--main-color-white);
+  border-radius: 10px;
 }
 
-.printer-container h2 {
-    color: var(--main-color-green);
-    text-align: center;
+.printer-container,
+.filament-container {
+  flex: 1;
+  padding: 1em;
+  margin: 1em;
+}
+
+.printer-container h2,
+.filament-container h2 {
+  color: var(--main-color-green);
+  text-align: center;
 }
 
 .printer-container ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .printer-container li {
-    background-color: #f0f0f0;
-    margin: 20px 0;
-    padding: 10px;
-    border-radius: 15px;
+  background-color: #f0f0f0;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 15px;
 }
 
-.printer-container li h3, 
+.printer-container li h3,
 .printer-container li p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .set-btn {
-    background-color:  var(--main-color-light-green);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 1em;
-    font-size: 1em;
+  background-color: var(--main-color-light-green);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1em;
+  font-size: 1em;
 }
 
 .set-btn a {
-    color: var(--main-color-white);
-    text-decoration: none;
+  color: var(--main-color-white);
+  text-decoration: none;
 }
 
 .add-btn {
-    background-color:  var(--main-color-white);
-    color: var(--main-color-green);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 1em 0 2em 4em; 
-    font-size: 1em;
+  background-color: var(--main-color-white);
+  color: var(--main-color-green);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1em 0 5em 2em;
+  font-size: 1em;
 }
 
 .add-btn a {
-    text-decoration: none;
-    color: var(--main-color-green);
+  text-decoration: none;
+  color: var(--main-color-green);
 }
 
 /********** Queue View **********/
 .job-queue-container {
-    padding: 1em;
-    margin: 20px;
-    background-color: var(--main-color-white);
-    border-radius: 10px;
+  margin: 2em;
+  padding: 2em;
+  background-color: var(--main-color-white);
+  border-radius: 10px;
 }
 
 .job-queue-container h2 {
-    text-align: center;
-    color: var(--main-color-green)
+  text-align: center;
+  color: var(--main-color-green);
 }
 
+/********** NOTE: This styling applies to all tables (e.g. Queue Table & Filament Table) **********/
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: var(--main-color-white);
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--main-color-white);
+  margin-bottom: 1em;
 }
 
 table thead tr {
-    background-color: var(--main-color-light-green);
-    color: var(--main-color-white);
+  background-color: var(--main-color-light-green);
+  color: var(--main-color-white);
 }
 
 table thead th,
 table tbody td {
-    padding: 15px;
-    border: 1px solid #ddd;
-    text-align: left;
-    font-size: 1em;
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1em;
 }
 
 table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 table tbody tr:hover {
-    background-color: #dbdbdb;
+  background-color: #dbdbdb;
 }
 
 table tbody tr td:first-child,
 table tbody tr td:nth-child(2) {
-    font-weight: bold; 
+  font-weight: bold;
 }
 
 /* Add or remove or change for Wednesday */
 table tbody td[data-status="Error"] {
-    background-color: #F75D59; 
+  background-color: #f75d59;
 }
 
 table tbody td[data-status="RHI"] {
-    background-color: #DCDCDC; 
+  background-color: #dcdcdc;
 }
 
 table tbody td[data-status="Pending"] {
-    background-color: #FAF884; 
+  background-color: #faf884;
 }
 
 /********** Printer Status **********/
 .green {
-    background-color: green;
+  background-color: green;
 }
 
 .orange {
-    background-color: orange;
+  background-color: orange;
 }
 
 .red {
-    background-color: red;
+  background-color: red;
 }
 
 .grey {
-    background-color: grey;
+  background-color: grey;
 }
 
 .status-container {
-    margin: 20px;
-    padding: 25px;
-    background-color: var(--main-color-white);
-    color: var(--main-color-green);
-    border-radius: 10px;
-    text-align: center;
+  margin: 2em;
+  padding: 2em;
+  background-color: var(--main-color-white);
+  color: var(--main-color-green);
+  border-radius: 10px;
+  text-align: center;
 }
 
 .printer-status {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 10px 0;
 }
 
 .printer {
-    flex: 1;
-    border-radius: 5px;
-    padding: 45px 0;
-    color: var(--main-color-white);
-    font-weight: bold;
+  flex: 1;
+  border-radius: 5px;
+  padding: 45px 0;
+  color: var(--main-color-white);
+  font-weight: bold;
 }
 
 .make-ready,
-.job-info, 
+.job-info,
 .printer-info,
 .info {
-    text-align: left;
-    margin-left: 10px;
+  text-align: left;
+  margin-left: 10px;
 }
 
 .jobs-container {
-    margin: 3em 20px 1em 20px;
-    padding: 20px;
-    background-color: var(--main-color-white);
-    border-radius: 10px;
-    color: var(--main-color-green);
+  margin: 2em;
+  padding: 2em;
+  background-color: var(--main-color-white);
+  border-radius: 10px;
+  color: var(--main-color-green);
 }
 
 .jobs-container h2 {
-    color: var(--main-color-green);
-    font-weight: 550;
-    margin-bottom: 15px; 
-    text-align: center;
+  color: var(--main-color-green);
+  font-weight: 550;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .jobs-container table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .jobs-container th,
 .jobs-container td {
-    border: 1px solid #ddd; 
-    padding: 8px;
-    text-align: left;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
 .jobs-container th {
-    background-color: var(--main-color-green);
-    color: var(--main-color-white);
+  background-color: var(--main-color-green);
+  color: var(--main-color-white);
 }
 
 .issue {
-    color: red;
+  color: red;
 }
 
 /********** Configure Printer **********/
 .config-container {
-    margin: 20px;
-    padding: 20px;
-    background-color: var(--main-color-white);
-    color: var(--main-color-green);
-    border-radius: 5px;
+  margin: 2em;
+  padding: 2em;
+  background-color: var(--main-color-white);
+  color: var(--main-color-green);
+  border-radius: 5px;
 }
 
 .config-container h2 {
-    color: var(--main-color-green);
-    font-weight: 550;
+  color: var(--main-color-green);
+  font-weight: 550;
 }
 
 .config-container form {
-    display: grid;
-    grid-gap: 10px;
-    align-items: center;
+  display: grid;
+  grid-gap: 10px;
+  align-items: center;
 }
 
-.form-items label, 
+.form-items label,
 .form-items select {
-    padding: 8px;
+  padding: 8px;
 }
 
 #config-btn {
-    margin-top: 12px;
-    padding: 10px; 
-    border: none; 
-    border-radius: 5px;
-    background-color: var(--main-color-green);
-    color: var(--main-color-white);
+  margin-top: 12px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--main-color-green);
+  color: var(--main-color-white);
 }
 
 #config-btn:hover {
-    background-color: #1e2a10;
+  background-color: #1e2a10;
 }

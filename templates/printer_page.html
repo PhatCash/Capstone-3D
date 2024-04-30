@@ -1,24 +1,52 @@
-{% extends "layout.html" %}
-{% block content %}
-<div class="printer-container">
+{% extends "layout.html" %} {% block content %}
+<div class="printer-filament-container">
+  <div class="printer-container">
     <h2>Printer Information</h2>
     <ul>
-        {% for printer in data.printers %}
-        <li>
-            <!-- Keep it the same for now -->
-            <h3>Printer #{{ printer.id }}</h3>
-            <p>Port: {{ printer.port }}</p>
-            <p>Filament Color: {{ printer.filamentColor }}</p>
-            <p>Nozzle Size: {{ printer.nozzleDiameter }}</p>
-            <p>Nozzle Diameter: {{ printer.nozzleDiameter }}</p>
-            <button class="set-btn">
-                <a method="get" href="{{ url_for('configure') }}?printerid={{ printer.id }}">Printer Settings</a>
-            </button>
-        </li>
-        {% endfor %}
+      {% for printer in data_printers.printers %}
+      <li>
+        <h3>Printer #{{ printer.id }}</h3>
+        <p>Port: {{ printer.port }}</p>
+        <p>Filament Color: {{ printer.filamentColor }}</p>
+        <p>Nozzle Size: {{ printer.nozzleDiameter }}</p>
+        <p>Nozzle Diameter: {{ printer.nozzleDiameter }}</p>
+        <button class="set-btn">
+          <a href="{{ url_for('configure') }}?printerid={{ printer.id }}"
+            >Printer Settings</a
+          >
+        </button>
+      </li>
+      {% endfor %}
     </ul>
+  </div>
+  <!-- The table already has styling properties from the job_queue table -->
+  <div class="filament-container">
+    <h2>Filament Inventory</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Color</th>
+          <th>Type</th>
+          <th>Manufacture</th>
+          <th>Spool Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for filament in data_filaments.filaments %}
+        <tr>
+          <td>{{ filament.id }}</td>
+          <td>{{ filament.color }}</td>
+          <td>{{ filament.type }}</td>
+          <td>{{ filament.manufacture }}</td>
+          <td>{{ filament.spool_cnt }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 <button class="add-btn">
-    <a method="get" href="{{ url_for('add') }}">+ Add Printer</a>
+  <a href="{{ url_for('add') }}">+ Add Printer</a>
 </button>
 {% endblock %}

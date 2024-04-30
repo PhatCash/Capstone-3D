@@ -1,22 +1,22 @@
-{% extends "layout.html" %}
-{% block content %}
+{% extends "layout.html" %} {% block content %}
 <div class="config-container">
-    <h2>Settings for {{ request.args.get('printerid') }}</h2>
-    <form class="form-items">
-        <label for="filament-type">Filament Type:</label>
-        <select id="filament-type" name="filament-type">
-            {% for filament in data.settings.filament %}
-            <option value="{{ filament }}">{{ filament }}</option>
-            {% endfor %}
-        </select>
-        <label for="nozzle-size">Nozzle Size:</label>
-        <select id="nozzle-size" name="nozzle-size">
-            {% for size in data.settings.nozzleSize %}
-            <option value="{{ size }}">{{ size }}mm</option>
-            {% endfor %}
-        </select>
+  <h2>Settings for {{ request.args.get('printerid') }}</h2>
+  <!-- Same thing regarding field set -->
+  <form class="form-items">
+    <label for="filament-type">Filament Type:</label>
+    <select id="filament-type" name="filament-type">
+      {% for filament in data.settings.filament %}
+      <option value="{{ filament }}">{{ filament }}</option>
+      {% endfor %}
+    </select>
+    <label for="nozzle-size">Nozzle Size:</label>
+    <select id="nozzle-size" name="nozzle-size">
+      {% for size in data.settings.nozzleSize %}
+      <option value="{{ size }}">{{ size }}mm</option>
+      {% endfor %}
+    </select>
 
-        <button id="config-btn" type="submit">Apply Configuration</button>
-    </form>
+    <button id="config-btn" type="submit">Apply Configuration</button>
+  </form>
 </div>
 {% endblock %}
