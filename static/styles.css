@@ -94,37 +94,57 @@ nav ul li a:hover {
   margin: 5px 0;
 }
 
-.set-btn {
-  background-color: var(--main-color-light-green);
+/********** Decided to have a universal set of buttons based on their action **********/
+.primary-btn,
+.secondary-btn,
+.danger-btn {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 1em;
+  margin: 1em 0.25em 1em 1em;
   font-size: 1em;
+  width: 175px;
+  height: 2.5em;
 }
 
-.set-btn a {
+.primary-btn {
+  background-color: var(--main-color-light-green);
+}
+
+.secondary-btn,
+.add-btn {
+  background-color: var(--main-color-white);
+}
+
+.danger-btn {
+  background-color: red;
+}
+
+.primary-btn a,
+.danger-btn a {
   color: var(--main-color-white);
   text-decoration: none;
 }
 
+.secondary-btn a {
+  color: var(--main-color-light-green);
+  text-decoration: none;
+}
+
+/********** Custom styled buttons **********/
+.custom-btn {
+  margin: 1em 0 1em 0;
+}
+
 .add-btn {
-  background-color: var(--main-color-white);
-  color: var(--main-color-green);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
   margin: 1em 0 5em 2em;
   font-size: 1em;
 }
 
 .add-btn a {
-  text-decoration: none;
-  color: var(--main-color-green);
+  color: black;
 }
-
 /********** Queue View **********/
 .job-queue-container {
   margin: 2em;
