@@ -1,22 +1,40 @@
 {% extends "layout.html" %} {% block content %}
 <div class="config-container">
   <h2>Settings for {{ request.args.get('printerid') }}</h2>
-  <!-- Same thing regarding field set -->
-  <form class="form-items">
+  <form class="form-printer">
+    <label for="port-number">Port Number:</label>
+    <input
+      type="number"
+      id="port-number"
+      name="port-number"
+      min="0"
+      step="1"
+      placeholder="Please enter a positive number"
+      required
+    />
     <label for="filament-type">Filament Type:</label>
     <select id="filament-type" name="filament-type">
+      <option value="" disabled selected>Select filament type</option>
       {% for filament in data.settings.filament %}
       <option value="{{ filament }}">{{ filament }}</option>
       {% endfor %}
     </select>
     <label for="nozzle-size">Nozzle Size:</label>
     <select id="nozzle-size" name="nozzle-size">
+      <option value="" disabled selected>Select nozzle size</option>
       {% for size in data.settings.nozzleSize %}
       <option value="{{ size }}">{{ size }}mm</option>
       {% endfor %}
     </select>
-
-    <button id="config-btn" type="submit">Apply Configuration</button>
+    <div class="button-container">
+      <button id="config-apply-btn" type="submit" class="primary-btn">
+        Apply
+      </button>
+      <button id="config-reset-btn" type="reset" class="info-btn">Reset</button>
+      <button id="config-remove-btn" type="button" class="danger-btn">
+        Remove Printer
+      </button>
+    </div>
   </form>
 </div>
 {% endblock %}

@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
     <title>Capstone Webpages</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Try to implement -->
     <div class="nav-container">
-        <img src="{{ url_for('static', filename='Images/PSU logo.png') }}" alt="PSU Logo">
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('status') }}">Printer Status</a></li>
-                <li><a href="{{ url_for('queue') }}">Queue View</a></li>
-                <li><a href="{{ url_for('page') }}">Printer Page</a></li>
-            </ul>
-        </nav>
+      <img
+        src="{{ url_for('static', filename='Images/PSU logo.png') }}"
+        alt="PSU Logo"
+      />
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('status') }}">Printer Status</a></li>
+          <li><a href="{{ url_for('queue') }}">Queue View</a></li>
+          <li><a href="{{ url_for('page') }}">Printer Page</a></li>
+        </ul>
+      </nav>
     </div>
     {% block content %}{% endblock content %}
-</body>
+  </body>
 </html>
