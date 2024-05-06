@@ -10,10 +10,13 @@
         <p>Filament Color: {{ printer.filamentColor }}</p>
         <p>Nozzle Size: {{ printer.nozzleDiameter }}</p>
         <p>Nozzle Diameter: {{ printer.nozzleDiameter }}</p>
-        <button class="set-btn">
+        <button class="primary-btn custom-btn">
           <a href="{{ url_for('configure') }}?printerid={{ printer.id }}"
             >Printer Settings</a
           >
+        </button>
+        <button class="secondary-btn">
+          <a href="">Change filament</a>
         </button>
       </li>
       {% endfor %}
@@ -44,9 +47,15 @@
         {% endfor %}
       </tbody>
     </table>
+    <button class="primary-btn custom-btn">
+      <a href="">Add Filament</a>
+    </button>
+    <button class="danger-btn">
+      <a href="">Remove Filament</a>
+    </button>
   </div>
 </div>
-<button class="add-btn">
+<button class="primary-btn add-btn">
   <a href="{{ url_for('add') }}">+ Add Printer</a>
 </button>
 {% endblock %}
