@@ -97,7 +97,8 @@ nav ul li a:hover {
 /********** Decided to have a universal set of buttons based on their action **********/
 .primary-btn,
 .secondary-btn,
-.danger-btn {
+.danger-btn,
+.info-btn {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -121,8 +122,13 @@ nav ul li a:hover {
   background-color: red;
 }
 
+.info-btn {
+  background-color: orange;
+}
+
 .primary-btn a,
-.danger-btn a {
+.danger-btn a,
+.info-btn a {
   color: var(--main-color-white);
   text-decoration: none;
 }
@@ -192,7 +198,6 @@ table tbody tr td:nth-child(2) {
   font-weight: bold;
 }
 
-/* Add or remove or change for Wednesday */
 table tbody td[data-status="Error"] {
   background-color: #f75d59;
 }
@@ -293,38 +298,49 @@ table tbody td[data-status="Pending"] {
 
 /********** Configure Printer **********/
 .config-container {
-  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em auto;
   padding: 2em;
+  border-radius: 10px;
   background-color: var(--main-color-white);
-  color: var(--main-color-green);
-  border-radius: 5px;
+  max-width: 40%;
 }
 
 .config-container h2 {
   color: var(--main-color-green);
   font-weight: 550;
+  margin-bottom: 2em;
 }
 
-.config-container form {
+.form-printer {
+  width: 70%;
   display: grid;
-  grid-gap: 10px;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Creates two columns: one for labels, one for inputs/selects */
+  gap: 20px;
   align-items: center;
 }
 
-.form-items label,
-.form-items select {
-  padding: 8px;
+.form-printer label {
+  grid-column: 1; 
+  justify-self: start; /
 }
 
-#config-btn {
-  margin-top: 12px;
+.form-printer input,
+.form-printer select {
+  grid-column: 2; 
+  width: 100%; 
   padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--main-color-green);
-  color: var(--main-color-white);
+  box-sizing: border-box; 
 }
 
-#config-btn:hover {
-  background-color: #1e2a10;
+/* There are contrasting errors for buttons, more explained in the PR review */
+.form-printer .button-container {
+  grid-column: 1 / -1; /* Span across all columns*/ 
+  display: flex;
+  justify-content: space-between; 
 }
