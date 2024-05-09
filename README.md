@@ -1,4 +1,7 @@
 # Capstone Project Webpages 
 ## Boiler Templates 
-Helps us get an idea of the UI side of FUME
-- Use placeholder data for now
+
+Ensure you have the following installed: python 3.11 or newer and Flask
+
+You should be able to simply double-click the app.py to launch the application on most systems.
+From the command line ${python location}python.exe {applcation location}/app.py

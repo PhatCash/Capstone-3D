@@ -1,19 +1,53 @@
 {
   "filaments": [
     {
-        "id": "1",
-        "color": "Galazy Black",
-        "type": "PLA"
+      "id": "1",
+      "color": "Galaxy Black",
+      "type": "PLA",
+      "manufacture": "PSU",
+      "spool_cnt": 3
     },
     {
-        "id": "2",
-        "color": "Dark Green",
-        "type": "PLA"
+      "id": "2",
+      "color": "Moss Green",
+      "type": "PLA",
+      "manufacture": "PSU",
+      "spool_cnt": 1
     },
     {
-        "id": "3",
-        "color": "Light Green",
-        "type": "PLA"
+      "id": "3",
+      "color": "Galaxy Black",
+      "type": "PLA",
+      "manufacture": "PSU",
+      "spool_cnt": 6
+    },
+    {
+      "id": "4",
+      "color": "Moss Green",
+      "type": "PLA",
+      "manufacture": "PSU",
+      "spool_cnt": 2
+    },
+    {
+      "id": "5",
+      "color": "Galaxy Black",
+      "type": "PLA",
+      "manufacture": "PSU",
+      "spool_cnt": 4
+    },
+    {
+      "id": "6",
+      "color": "Moss Green",
+      "type": "PLA",
+      "manufacture": "PSU",
+      "spool_cnt": 1
+    },
+    {
+      "id": "99",
+      "color": "none",
+      "type": "none",
+      "manufacture": "none",
+      "spool_cnt": 0
     }
   ]
 }

@@ -41,6 +41,13 @@
       "type": "PLA",
       "manufacture": "PSU",
       "spool_cnt": 1
+    },
+    {
+      "id": "99",
+      "color": "none",
+      "type": "none",
+      "manufacture": "none",
+      "spool_cnt": 0
     }
   ]
 }
