@@ -26,7 +26,7 @@ def page():
         nozzleSize = request.form.get("nozzle-size")
         
         add_printer(printerID, printerPort, filamentType, nozzleSize)
-        flash("Printer {printerID} Added", printerID)
+        flash("Printer {% printerID %} Added", printerID)
 
     # Distinguish between the printers.JSON and filaments.JSON
     with open('./Web_UI/data/printers.json') as printer_file, open('./Web_UI/data/filaments.json') as filament_file:

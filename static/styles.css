@@ -54,6 +54,13 @@ nav ul li a:hover {
   background-color: #e4e4e4;
 }
 
+.message {
+  text-align: center;
+  color: white;
+  background-color: #4caf50;
+  font-size: 25px;
+}
+
 /********** Printer Page **********/
 .printer-filament-container {
   display: flex;
