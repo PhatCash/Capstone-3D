@@ -2,8 +2,6 @@ from flask import Flask, request, render_template, redirect
 import json
 from update_funcs.updateJSON import add_printer
 
-import DB_and_comm.backend.endpoints
-
 app = Flask(__name__)
 
 @app.route('/')
