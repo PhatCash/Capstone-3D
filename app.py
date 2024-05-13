@@ -2,6 +2,8 @@ from flask import Flask, request, render_template, redirect
 import json
 from update_funcs.updateJSON import add_printer
 
+import DB_and_comm.backend.endpoints
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -12,7 +14,7 @@ def home():
 @app.route('/printer_status')
 def status():
     # with closes the file
-    with open('./data/data.json') as json_file, open('./data/printers.json') as printer_file:
+    with open('./Web_UI/data/data.json') as json_file, open('./Web_UI/data/printers.json') as printer_file:
         return render_template("printer_status.html", data=json.load(json_file), printers=json.load(printer_file)) # Send json data
     
 # Implement the other two webpages - need same json
@@ -23,28 +25,29 @@ def page():
         printerPort = request.form.get("printer-port")
         filamentType = request.form.get("filament-type")
         nozzleSize = request.form.get("nozzle-size")
+        
         add_printer(printerID, printerPort, filamentType, nozzleSize)
 
     # Distinguish between the printers.JSON and filaments.JSON
-    with open('./data/printers.json') as printer_file, open('./data/filaments.json') as filament_file:
+    with open('./Web_UI/data/printers.json') as printer_file, open('./Web_UI/data/filaments.json') as filament_file:
         printers = json.load(printer_file)
         filaments = json.load(filament_file)
         return render_template("printer_page.html", data_printers=printers, data_filaments=filaments)
 
 @app.route('/configure_printer')
 def configure():
-    with open('./data/data.json') as json_file:
+    with open('./Web_UI/data/data.json') as json_file:
         return render_template("configure_printer.html", data=json.load(json_file))
 
 @app.route('/job_queue')
 def queue():
-    with open('./data/data.json') as json_file:
+    with open('./Web_UI/data/data.json') as json_file:
         return render_template("job_queue.html", data=json.load(json_file))
 
 @app.route('/add_printer', methods=["GET","POST"])
 def add():
-    with open('./data/data.json') as json_file:
+    with open('./Web_UI/data/data.json') as json_file:
         return render_template("add_printer.html", data=json.load(json_file))
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=5100)

@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
+<meta http-equiv="refresh" content="30">
 <div class="status-container">
     <h2>Print Farm Status</h2>
     <div class="printer-status">
@@ -25,10 +26,9 @@
             <p class="info">Filament Type: {{ printer.filamentType }}</p>
             <!-- Catch the failed prints if no more filament, needs change, etc.-->
         {% if printer.status == 'Pick Up' %}
-            <div class="make-ready">
-            <input type="checkbox" id="printer{{ printer.id }}" name="printer{{ printer.id }}">
-            <label for="printer{{ printer.id }}">Make Ready</label>
-            </div>
+            <button class="secondary-btn" id="printer{{ printer.id }}" name="printer{{ printer.id }}">
+                Make Ready
+            </button>
         {% endif %}
             </div>
         {% endfor %}

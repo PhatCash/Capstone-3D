@@ -111,19 +111,23 @@ nav ul li a:hover {
 
 .primary-btn {
   background-color: var(--main-color-light-green);
+  border: 2px solid black;
 }
 
 .secondary-btn,
 .add-btn {
   background-color: var(--main-color-white);
+  border: 2px solid black;
 }
 
 .danger-btn {
   background-color: red;
+  border: 2px solid black;
 }
 
 .info-btn {
   background-color: orange;
+  border: 2px solid black;
 }
 
 .primary-btn a,

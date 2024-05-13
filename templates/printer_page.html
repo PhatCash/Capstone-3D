@@ -21,6 +21,9 @@
       </li>
       {% endfor %}
     </ul>
+    <button class="primary-btn add-btn">
+      <a href="{{ url_for('add') }}">+ Add Printer</a>
+    </button>
   </div>
   <!-- The table already has styling properties from the job_queue table -->
   <div class="filament-container">
@@ -55,7 +58,4 @@
     </button>
   </div>
 </div>
-<button class="primary-btn add-btn">
-  <a href="{{ url_for('add') }}">+ Add Printer</a>
-</button>
 {% endblock %}
