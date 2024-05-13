@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='styles.css') }}"
     />
-    <title>Capstone Webpages</title>
+    <title>Capstone Webpages</title> <!-- TODO GET APP NAME AND CHANGE -->
   </head>
   <body>
     <!-- Try to implement -->
@@ -23,6 +23,13 @@
           <li><a href="{{ url_for('page') }}">Printer Page</a></li>
         </ul>
       </nav>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
     </div>
     {% block content %}{% endblock content %}
   </body>

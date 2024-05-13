@@ -1,8 +1,9 @@
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template, redirect, flash
 import json
 from update_funcs.updateJSON import add_printer
 
 app = Flask(__name__)
+app.secret_key = "secret"
 
 @app.route('/')
 def home():
@@ -25,6 +26,7 @@ def page():
         nozzleSize = request.form.get("nozzle-size")
         
         add_printer(printerID, printerPort, filamentType, nozzleSize)
+        flash("Printer {printerID} Added", printerID)
 
     # Distinguish between the printers.JSON and filaments.JSON
     with open('./Web_UI/data/printers.json') as printer_file, open('./Web_UI/data/filaments.json') as filament_file:
