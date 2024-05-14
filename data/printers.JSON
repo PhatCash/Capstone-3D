@@ -1,40 +1,40 @@
 {
     "printers": [
         {
-          "id": "A1",
-          "port": 6000,
-          "filamentColor": "Galaxy Black",
-          "filamentType": "PLA",
-          "nozzleDiameter": "0.4 mm",
-          "job": "Black dog",
-          "status": "Printing"
+            "id": "A1",
+            "port": 6000,
+            "filamentColor": "Galaxy Black",
+            "filamentType": "PLA",
+            "nozzleDiameter": "0.4 mm",
+            "job": "Black dog",
+            "status": "Printing"
         },
         {
-          "id": "A2",
-          "port": 6001,
-          "filamentColor": "Dark Green",
-          "filamentType": "PLA",
-          "nozzleDiameter": "0.4 mm",
-          "job": "Green Moss Frog",
-          "status": "Error"
+            "id": "A2",
+            "port": 6001,
+            "filamentColor": "Dark Green",
+            "filamentType": "PLA",
+            "nozzleDiameter": "0.4 mm",
+            "job": "Green Moss Frog",
+            "status": "Error"
         },
         {
-          "id": "A3",
-          "port": 6003,
-          "filamentColor": "Galaxy Black",
-          "filamentType": "PLA",
-          "nozzleDiameter": "0.4 mm",
-          "job": "Black dog",
-          "status": "Pick Up"
+            "id": "A3",
+            "port": 6003,
+            "filamentColor": "Galaxy Black",
+            "filamentType": "PLA",
+            "nozzleDiameter": "0.4 mm",
+            "job": "Black dog",
+            "status": "Pick Up"
         },
         {
-          "id": "B2",
-          "port": 6503,
-          "filamentColor": "Galaxy Black",
-          "filamentType": "PLA",
-          "nozzleDiameter": "0.6 mm",
-          "job": "",
-          "status": "Ready"
+            "id": "B2",
+            "port": 6503,
+            "filamentColor": "Galaxy Black",
+            "filamentType": "PLA",
+            "nozzleDiameter": "0.6 mm",
+            "job": "",
+            "status": "Ready"
         }
-      ]
+    ]
 }

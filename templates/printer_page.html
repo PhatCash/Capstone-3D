@@ -53,9 +53,37 @@
     <button class="primary-btn custom-btn">
       <a href="">Add Filament</a>
     </button>
-    <button class="danger-btn">
+
+    <button class="danger-btn" id="rm-filament" onclick="popup()">
       <a href="">Remove Filament</a>
     </button>
+
+    <div id="get_id" class="popup">
+    <form class="form-items" method="POST" action="/filament_remove">
+        <div class="popup-content">
+            <h1 style="color: green">Select which filament to remove:</h1>
+            <label for="filament-id">Filament Type:</label>
+            <select id="filament-id" name="filament-id">
+              {% for filament in data_filaments.filaments %}
+              <option value="{{ filament.id }}">{{ filament.id }}</option>
+              {% endfor %}
+            </select>
+            <button id="close-btn" type="sumbmit" value="submit">Remove</button>
+        </div>
+      </form>
+    </div>
+
   </div>
 </div>
+
+<script> 
+  function popup() { 
+    get_id.classList.add("show");
+  }
+
+  function popdwn(filamentID) {
+    suc = rem_filament(filament-id);
+  }
+</script>
+
 {% endblock %}

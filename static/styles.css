@@ -54,6 +54,13 @@ nav ul li a:hover {
   background-color: #e4e4e4;
 }
 
+.message {
+  text-align: center;
+  color: white;
+  background-color: #4caf50;
+  font-size: 25px;
+}
+
 /********** Printer Page **********/
 .printer-filament-container {
   display: flex;
@@ -347,4 +354,37 @@ table tbody td[data-status="Pending"] {
   grid-column: 1 / -1; /* Span across all columns*/ 
   display: flex;
   justify-content: space-between; 
+}
+
+
+.popup {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(
+      0,
+      0,
+      0,
+      0.4
+  );
+  display: none;
+}
+.popup-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888888;
+  width: 30%;
+  font-weight: bolder;
+}
+.popup-content button {
+  display: block;
+  margin: 0 auto;
+}
+.show {
+  display: block;
 }

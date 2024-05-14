@@ -1,8 +1,9 @@
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template, redirect, flash
 import json
-from update_funcs.updateJSON import add_printer
+from functions.updateJSON import add_printer, rem_filament
 
 app = Flask(__name__)
+app.secret_key = "secret"
 
 @app.route('/')
 def home():
@@ -25,12 +26,27 @@ def page():
         nozzleSize = request.form.get("nozzle-size")
         
         add_printer(printerID, printerPort, filamentType, nozzleSize)
+        flash("Printer Added")
 
     # Distinguish between the printers.JSON and filaments.JSON
     with open('./Web_UI/data/printers.json') as printer_file, open('./Web_UI/data/filaments.json') as filament_file:
         printers = json.load(printer_file)
         filaments = json.load(filament_file)
         return render_template("printer_page.html", data_printers=printers, data_filaments=filaments)
+
+
+@app.route('/filament_remove', methods=["GET","POST"])
+def fil_rem():
+    filamentID = request.form.get("filament-id")
+
+    rem_filament(filamentID)
+    flash("Filament Removed")
+    
+    with open('./Web_UI/data/printers.json') as printer_file, open('./Web_UI/data/filaments.json') as filament_file:
+        printers = json.load(printer_file)
+        filaments = json.load(filament_file)
+        return render_template("printer_page.html", data_printers=printers, data_filaments=filaments)
+
 
 @app.route('/configure_printer')
 def configure():
