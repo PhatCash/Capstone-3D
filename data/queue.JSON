@@ -1,0 +1,68 @@
+{
+  "queue": [
+    {
+      "id": 1,
+      "jobName": "no name",
+      "type": "PLA - Black",
+      "size": 0.6,
+      "layer": 0.2,
+      "density": "20%",
+      "quantity": 1,
+      "status": "pending",
+      "issue": "",
+      "lastUpdated": "04/07/2024 3:00 pm"
+    },
+    {
+      "id": 2,
+      "jobName": "vent spacer",
+      "type": "PLA - Green",
+      "size": 0.5,
+      "layer": 0.2,
+      "density": "10%",
+      "quantity": 1,
+      "printer": "",
+      "status": "Error",
+      "issue": "No Matching Nozzle Dia.",
+      "lastUpdated": "04/07/2024 1:00 pm"
+    },
+    {
+      "id": 3.1,
+      "jobName": "Black Dog",
+      "type": "PLA - Black",
+      "size": 0.4,
+      "layer": 0.2,
+      "density": "20%",
+      "quantity": 2,
+      "printer": "A3",
+      "status": "RHI",
+      "issue": "Ready for Pickup",
+      "lastUpdated": "04/07/2024 2:00 pm"
+    },
+    {
+      "id": 3.2,
+      "type": "PLA - Black",
+      "jobName": "Black Dog",
+      "size": 0.4,
+      "layer": 0.2,
+      "density": "10%",
+      "quantity": 2,
+      "printer": "A1",
+      "status": "Printing",
+      "issue": "",
+      "lastUpdated": "04/07/2024 3:00 pm"
+    },
+    {
+      "id": 4,
+      "jobName": "Green Moss Frog",
+      "type": "PLA - Dark Green",
+      "size": 0.6,
+      "layer": 0.2,
+      "density": "10%",
+      "quantity": 2,
+      "printer": "A2",
+      "status": "Error",
+      "issue": "Filament run-out",
+      "lastUpdated": "04/07/2024 3:00 pm"
+    }
+  ]
+}
