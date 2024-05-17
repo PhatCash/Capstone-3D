@@ -7,7 +7,12 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='styles.css') }}"
     />
-    <title>Capstone Webpages</title> <!-- TODO GET APP NAME AND CHANGE -->
+    <title>Capstone Webpages</title>
+    <!-- https://getbootstrap.com/docs/5.2/components/modal/ - For modal -->
+    <script
+      src="https://kit.fontawesome.com/c1285ec62a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Try to implement -->
@@ -24,13 +29,10 @@
         </ul>
       </nav>
     </div>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-      {% for message in messages %}
-      <p class="message">{{message}}</p>
-      {% endfor %}
-    {% endif %}
-    {% endwith %}
-    {% block content %}{% endblock content %}
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for
+    message in messages %}
+    <p class="message">{{message}}</p>
+    {% endfor %} {% endif %} {% endwith %} {% block content %}{% endblock
+    content %}
   </body>
 </html>
